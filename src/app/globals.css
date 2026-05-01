@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-brand: #1a4a38;
+  --color-brand-light: #2c6f55;
+  --color-brand-dark: #123326;
+  --color-accent: #d4af37;
+  
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold;
+  }
+}
