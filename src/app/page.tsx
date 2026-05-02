@@ -50,7 +50,7 @@ export default async function Home() {
               <span className="text-accent font-semibold tracking-wider uppercase text-sm mb-2 block">The NZ Travels Difference</span>
               <h2 className="text-4xl md:text-5xl font-serif mb-6 leading-tight">Why Journey With Us?</h2>
               <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                We don't just book trips; we craft unforgettable memories. With over 15 years of local expertise, our team of New Zealand specialists ensures every detail of your journey is perfect.
+                We don't just book trips; we craft unforgettable memories. With over 15 years of local expertise, our team of NZ Travel & Tours specialists ensures every detail of your journey is perfect.
               </p>
 
               <div className="space-y-6">
@@ -82,8 +82,8 @@ export default async function Home() {
 
             <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1578339843615-188ccdf19363?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                alt="Hiking in New Zealand"
+                src="/images/why-journey.png"
+                alt="NZ Travel Guided Tour"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-brand-dark/20 mix-blend-multiply"></div>
