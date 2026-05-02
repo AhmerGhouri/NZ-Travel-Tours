@@ -2,6 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { FormEvent, useState } from 'react';
+import Image from 'next/image';
+import HeroBanner from '../../assets/Banner.jpeg'
 
 export default function HeroSection() {
   const router = useRouter();
@@ -19,10 +21,14 @@ export default function HeroSection() {
   return (
     <div className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://images.unsplash.com/photo-1469521669194-babbdf900920?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}
-      >
+      <div className="absolute inset-0">
+        <Image
+          src={HeroBanner}
+          alt="NZ Landscape"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/60 to-transparent"></div>
       </div>
 

@@ -7,8 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand & Description */}
           <div className="col-span-1 md:col-span-1">
-            <Link href="/" className="text-2xl font-serif font-bold text-white tracking-wide mb-4 inline-block">
-              NZ Travels <span className="text-accent">&</span> Tours
+            <Link href="/" className="flex items-center gap-2 mb-4">
+              <img src="/logo/1.png" alt="NZ Travels & Tours Logo" className="h-12 w-auto brightness-0 invert" />
+              <span className="text-2xl font-serif font-bold text-white tracking-wide">
+                NZ Travels <span className="text-accent">&</span> Tours
+              </span>
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               Curating unforgettable, premium travel experiences across the breathtaking landscapes of New Zealand.

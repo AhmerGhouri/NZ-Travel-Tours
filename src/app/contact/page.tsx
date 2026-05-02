@@ -3,7 +3,10 @@ export const metadata = {
   description: 'Get in touch with our New Zealand travel experts to plan your dream journey.',
 };
 
-export default function ContactPage() {
+export default async function ContactPage(props: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
+  const searchParams = await props.searchParams;
+  const interestParam = typeof searchParams.interest === 'string' ? searchParams.interest : 'Custom Itinerary';
+
   return (
     <div className="bg-slate-50 min-h-screen">
       {/* Header */}
@@ -48,7 +51,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h4 className="text-xl font-semibold text-brand-dark mb-1">Email Us</h4>
-                  <p className="text-slate-600">hello@nztravels.co.nz<br/>bookings@nztravels.co.nz</p>
+                  <p className="text-slate-600">nztravelsandtours@gmail.com</p>
                 </div>
               </div>
 
@@ -88,12 +91,15 @@ export default function ContactPage() {
               
               <div>
                 <label htmlFor="interest" className="block text-sm font-medium text-slate-700 mb-2">Primary Interest</label>
-                <select id="interest" className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-colors bg-white">
-                  <option>Luxury Lodge Retreat</option>
-                  <option>Adventure & Active</option>
-                  <option>Family Holiday</option>
-                  <option>Honeymoon / Romantic</option>
-                  <option>Custom Itinerary</option>
+                <select id="interest" defaultValue={interestParam} className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand focus:border-brand outline-none transition-colors bg-white">
+                  {interestParam !== 'Custom Itinerary' && interestParam !== 'Luxury Lodge Retreat' && interestParam !== 'Adventure & Active' && interestParam !== 'Family Holiday' && interestParam !== 'Honeymoon / Romantic' && (
+                    <option value={interestParam}>{interestParam}</option>
+                  )}
+                  <option value="Luxury Lodge Retreat">Luxury Lodge Retreat</option>
+                  <option value="Adventure & Active">Adventure & Active</option>
+                  <option value="Family Holiday">Family Holiday</option>
+                  <option value="Honeymoon / Romantic">Honeymoon / Romantic</option>
+                  <option value="Custom Itinerary">Custom Itinerary</option>
                 </select>
               </div>
 

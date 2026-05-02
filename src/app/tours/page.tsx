@@ -1,5 +1,5 @@
 import TourCard from '@/components/TourCard';
-import { tours } from '@/data/tours';
+import { getTours } from '@/lib/cms';
 
 export const metadata = {
   title: 'Our Tours | NZ Travels & Tours',
@@ -11,6 +11,8 @@ export default async function ToursPage(props: { searchParams: Promise<{ [key: s
   const destinationParam = typeof searchParams.destination === 'string' ? searchParams.destination.toLowerCase() : '';
   const regionParam = typeof searchParams.region === 'string' ? searchParams.region : 'All Destinations';
   const durationParam = typeof searchParams.duration === 'string' ? searchParams.duration : 'Any Duration';
+
+  const tours = await getTours();
 
   // Filter tours
   const filteredTours = tours.filter(tour => {
@@ -59,6 +61,7 @@ export default async function ToursPage(props: { searchParams: Promise<{ [key: s
                 <option value="All Destinations">All Destinations</option>
                 <option value="South Island">South Island</option>
                 <option value="North Island">North Island</option>
+                <option value="International">International</option>
               </select>
             </div>
             <div>

@@ -18,6 +18,12 @@ export default function DestinationsPage() {
       name: "South Island",
       description: "Experience majestic fjords, alpine scenery, and thrilling adventures.",
       imageUrl: "https://images.unsplash.com/photo-1469521669194-babbdf900920?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    },
+    {
+      id: "international",
+      name: "International",
+      description: "Explore world-class destinations from Umrah to Europe and tropical getaways.",
+      imageUrl: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
     }
   ];
 
