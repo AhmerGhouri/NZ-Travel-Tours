@@ -7,21 +7,21 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <header className="fixed inset-x-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center gap-2">
-              <img src="/logo/1.png" alt="NZ Travels & Tours Logo" className="h-12 w-auto" />
-              <span className="text-xl font-serif font-bold text-brand-dark tracking-wide hidden sm:block">
-                {/* NZ Travels <span className="text-brand">&</span> Tours */}
-              </span>
+              <img src="/logo/1.png" alt="NZ Travels & Tours Logo" className="w-20 h-20 sm:w-24 sm:h-24" />
+              {/* <span className="text-lg sm:text-xl font-serif font-bold text-brand-dark tracking-wide hidden lg:block">
+                NZ Travels <span className="text-brand">&</span> Tours
+              </span> */}
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-6 xl:space-x-8">
             <Link href="/" className="text-slate-600 hover:text-brand font-medium transition-colors">
               Home
             </Link>
@@ -34,28 +34,31 @@ export default function Header() {
             <Link href="/about" className="text-slate-600 hover:text-brand font-medium transition-colors">
               About
             </Link>
+            <Link href="/blog" className="text-slate-600 hover:text-brand font-medium transition-colors">
+              Blog
+            </Link>
             <Link href="/contact" className="text-slate-600 hover:text-brand font-medium transition-colors">
               Contact
             </Link>
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden md:flex items-center">
+          <div className="hidden lg:flex items-center">
             <Link
               href="/contact"
               className="bg-brand text-white px-6 py-2.5 rounded-full font-medium hover:bg-brand-dark transition-colors shadow-md hover:shadow-lg"
             >
-              Plan Your Trip
+              Get a Free Quote
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-slate-600 hover:text-brand focus:outline-none p-2"
+              className="text-slate-600 hover:text-brand focus:outline-none p-2 rounded-lg hover:bg-slate-50 transition-colors"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 ) : (
@@ -68,54 +71,67 @@ export default function Header() {
       </div>
 
       {/* Mobile Menu Dropdown */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 shadow-lg absolute w-full">
-          <nav className="flex flex-col px-4 py-4 space-y-4">
-            <Link
-              href="/"
-              className="text-slate-600 font-medium hover:text-brand transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/tours"
-              className="text-slate-600 font-medium hover:text-brand transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Tours
-            </Link>
-            <Link
-              href="/destinations"
-              className="text-slate-600 font-medium hover:text-brand transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Destinations
-            </Link>
-            <Link
-              href="/about"
-              className="text-slate-600 font-medium hover:text-brand transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              About
-            </Link>
+      <div className={`lg:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full transition-all duration-300 ease-in-out origin-top ${isMobileMenuOpen ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'}`}>
+        <nav className="flex flex-col px-6 py-8 space-y-6">
+          <Link
+            href="/"
+            className="text-slate-700 text-lg font-semibold hover:text-brand transition-colors flex items-center justify-between"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+            <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" /></svg>
+          </Link>
+          <Link
+            href="/tours"
+            className="text-slate-700 text-lg font-semibold hover:text-brand transition-colors flex items-center justify-between"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Tours
+            <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" /></svg>
+          </Link>
+          <Link
+            href="/destinations"
+            className="text-slate-700 text-lg font-semibold hover:text-brand transition-colors flex items-center justify-between"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Destinations
+            <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" /></svg>
+          </Link>
+          <Link
+            href="/about"
+            className="text-slate-700 text-lg font-semibold hover:text-brand transition-colors flex items-center justify-between"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            About
+            <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" /></svg>
+          </Link>
+          <Link
+            href="/blog"
+            className="text-slate-700 text-lg font-semibold hover:text-brand transition-colors flex items-center justify-between"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Blog
+            <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" /></svg>
+          </Link>
+          <Link
+            href="/contact"
+            className="text-slate-700 text-lg font-semibold hover:text-brand transition-colors flex items-center justify-between"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Contact
+            <svg className="w-5 h-5 text-slate-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" /></svg>
+          </Link>
+          <div className="pt-4">
             <Link
               href="/contact"
-              className="text-slate-600 font-medium hover:text-brand transition-colors"
+              className="bg-brand text-white px-6 py-4 rounded-xl font-bold text-center block hover:bg-brand-dark transition-colors shadow-lg"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Contact
+              Get a Free Quote
             </Link>
-            <Link
-              href="/contact"
-              className="bg-brand text-white px-6 py-3 rounded-md font-medium text-center hover:bg-brand-dark transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Plan Your Trip
-            </Link>
-          </nav>
-        </div>
-      )}
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

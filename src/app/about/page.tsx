@@ -2,7 +2,8 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'About Us | NZ Travels & Tours',
-  description: 'Learn about our passion for crafting extraordinary New Zealand travel experiences.',
+  description: 'Learn about our passion for crafting extraordinary New Zealand and international travel experiences. Your trusted partners in premium travel since 2010.',
+  keywords: ['NZ Travel & Tours team', 'Najaf Zohaib Travel', 'premium travel agency NZ', 'luxury tour experts'],
 };
 
 export default function AboutPage() {
@@ -10,9 +11,9 @@ export default function AboutPage() {
     <div className="bg-slate-50 min-h-screen">
       {/* Hero Section */}
       <div className="relative h-[50vh] w-full flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1507699622108-4be3abd695ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&q=80&w=2000')" }}
         >
           <div className="absolute inset-0 bg-brand-dark/60"></div>
         </div>
@@ -29,19 +30,21 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl md:text-4xl font-serif text-brand-dark mb-6">Pioneers of Premium Travel</h2>
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Founded in 2010, NZ Travels & Tours started with a simple vision: to offer truly immersive, high-quality travel experiences that go beyond the typical tourist trails.
+              At <b>NZ Travel & Tours</b>, we believe travel is more than just visiting new places — it’s about creating unforgettable experiences, meaningful connections, and lifelong memories.
+
+              Founded with a passion for global exploration and personalized travel planning, NZ Travel & Tours is dedicated to helping individuals, families, and groups discover the world with confidence and comfort. From adventure-filled journeys in New Zealand to luxury island escapes, cultural city tours, spiritual pilgrimages, and international holiday packages, we carefully design travel experiences tailored to your needs.
             </p>
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Our team consists of lifelong Kiwis and passionate explorers who have traversed every corner of this beautiful country. We leverage our local knowledge and exclusive partnerships to craft itineraries that reflect the true spirit of New Zealand.
+              Our team consists of passionate explorers who have traversed every corner of the World and built deep connections across the globe — from the holy cities of Saudi Arabia to the tropical islands of the Maldives and the historic streets of Europe.
             </p>
             <p className="text-slate-600 text-lg leading-relaxed">
-              Whether you're seeking adrenaline-pumping adventures in Queenstown, serene luxury lodges in the Bay of Islands, or cultural immersions in Rotorua, we curate journeys that resonate with your unique travel style.
+              Whether you're seeking adrenaline-pumping adventures, a spiritual Umrah journey, or a luxury escape in Singapore, we curate journeys that resonate with your unique travel style and budget.
             </p>
           </div>
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl">
-            <img 
-              src="https://images.unsplash.com/photo-1542317826-64670275817c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-              alt="Our Team in New Zealand" 
+            <img
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000"
+              alt="Our Team"
               className="absolute inset-0 w-full h-full object-cover"
             />
           </div>

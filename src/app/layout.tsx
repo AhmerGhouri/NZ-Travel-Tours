@@ -3,6 +3,7 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -15,8 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "NZ Travels & Tours | Premium New Zealand Experiences",
-  description: "Discover the breathtaking beauty of New Zealand with our bespoke luxury and adventure travel packages. Book your ultimate NZ getaway today.",
+  title: "NZ Travels & Tours | Premium International Travel Agency",
+  description: "Discover breathtaking landscapes and luxury tours across top global destinations including New Zealand, Maldives, Dubai, Europe, and Umrah packages. Expertly crafted itineraries for adventure, culture, and relaxation.",
+  keywords: ["international tours", "travel agency Pakistan", "best vacation packages", "Umrah tours", "Maldives trips", "Europe tours", "New Zealand travel packages", "luxury travel agency", "custom holiday itineraries"],
 };
 
 export default function RootLayout({
@@ -31,6 +33,7 @@ export default function RootLayout({
         <main className="flex-grow pt-20">
           {children}
         </main>
+        <WhatsAppWidget />
         <Footer />
       </body>
     </html>

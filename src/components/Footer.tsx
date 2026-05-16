@@ -6,15 +6,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand & Description */}
-          <div className="col-span-8  md:col-span-1">
+          <div className="col-span-1">
             <Link href="/" className="flex items-center mb-4">
-              <img src="/logo/2.png" alt="NZ Travels & Tours Logo" className="h-24 w-24 rounded" />
+              <img src="/logo/NZ-Logo-white.png" alt="NZ Travels & Tours Logo" className="h-24 w-24 rounded" />
               {/* <span className="text-2xl font-serif font-bold text-white tracking-wide">
                 NZ Travels <span className="text-accent">&</span> Tours
               </span> */}
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
-              Curating unforgettable, premium travel experiences across the breathtaking landscapes of New Zealand.
+              Curating unforgettable, premium international travel experiences across top global destinations with NZ Travels & Tours (Najaf Zohaib Travel & Tours).
             </p>
           </div>
 
@@ -34,7 +34,7 @@ export default function Footer() {
             <h3 className="text-lg font-serif font-semibold mb-4 text-white">Support</h3>
             <ul className="space-y-3 text-sm">
               <li><Link href="/contact" className="text-slate-300 hover:text-accent transition-colors">Contact Us</Link></li>
-              <li><Link href="/faq" className="text-slate-300 hover:text-accent transition-colors">FAQs</Link></li>
+              <li><Link href="/faqs" className="text-slate-300 hover:text-accent transition-colors">FAQs</Link></li>
               <li><Link href="/terms" className="text-slate-300 hover:text-accent transition-colors">Terms & Conditions</Link></li>
               <li><Link href="/privacy" className="text-slate-300 hover:text-accent transition-colors">Privacy Policy</Link></li>
             </ul>
@@ -66,7 +66,7 @@ export default function Footer() {
           <div className="flex space-x-4 mt-4 md:mt-0">
             {/* Social Icons Placeholders */}
             <a href="#" className="hover:text-white transition-colors">Facebook</a>
-            <a href="#" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://www.instagram.com/nztravelsandtours/" target="_blank" className="hover:text-white transition-colors">Instagram</a>
             <a href="#" className="hover:text-white transition-colors">Twitter</a>
           </div>
         </div>
